@@ -1,0 +1,15 @@
+/deep/.el-tabs--card {
+  .el-tabs__item{
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 0 40px !important;
+  }
+  .el-tabs__nav{
+    border: none !important;
+  }
+  .is-active {
+    border: 1px solid #0DD8B1 !important;
+    border-bottom: 1px solid #ffffff !important;
+  }
+}

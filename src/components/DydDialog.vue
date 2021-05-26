@@ -75,12 +75,12 @@ export default {
     .form-button {
       margin: 0 auto;
       padding-top: 10px;
-      width: 463px;
+      //width: 463px;
       height: 70px;
       text-align: center;
-      .dialog-footer-button{
-        width: 120px;
-      }
+      /*.dialog-footer-button{*/
+      /*  width: 120px;*/
+      /*}*/
       .el-button {
         width: 220px;
       }

@@ -8,7 +8,7 @@ import Layout from '@/layout'
 
 /* Router Modules */
 import nestedRouter from './modules/nested'
-
+import departmentRouter from './modules/department'
 /**
  * constantRoutes
  * a base page that does not have permission requirements
@@ -53,6 +53,7 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
+  departmentRouter,
   {
     path: '/permission',
     component: Layout,

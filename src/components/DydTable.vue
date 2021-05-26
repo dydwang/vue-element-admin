@@ -3,11 +3,16 @@
     <el-table
       v-loading="loading && isLoading"
       v-bind="$attrs"
-      border
+      v-on="$listeners"
       :data="tableData"
       stripe
       style="width: 100%"
     >
+      <el-table-column
+        v-if="showSelect"
+        type="selection"
+        width="55">
+      </el-table-column>
       <slot />
       <template slot="empty">
         <dyd-null-data v-bind="$attrs" />
@@ -48,6 +53,10 @@ export default {
     },
     isLoading: { // 是否显示加载
       default: true
+    },
+    showSelect: {
+      default: false,
+      type: Boolean
     }
   },
   data() {
@@ -119,17 +128,24 @@ export default {
       justify-content:center;
     }
     /deep/.el-table th>.cell {
-      font-size: 16px;
-      color: #333333;
-      letter-spacing: 0;
       line-height: 16px;
-
+      font-size: 16px;
+      color: #132233;
+      letter-spacing: 0.56px;
     }
     /deep/.el-table th {
-      background-color:  rgba(57,131,250,0.10);
+      border-bottom-color: #EDF2F7;
+    }
+    /deep/.el-table td {
+      // background-color:  rgba(57,131,250,0.10);
+      border-bottom: none;
     }
     /deep/.el-table__empty-block {
-      width: 100% !important;
+      width: calc( 100% - 100px ) !important;
+      margin: 50px;
+    }
+    /deep/.el-table__empty-text{
+      width: auto;
     }
   }
 </style>

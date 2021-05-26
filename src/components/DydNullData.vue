@@ -1,39 +1,38 @@
 <template>
   <div class="DydNullData">
     <img class="null-image" src="@/assets/img/nullData.png">
-    <div class="dyd-null-page-text">{{nullDataText}}</div>
+    <div class="dyd-null-page-text">{{ nullDataText }}</div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'index',
-    props: {
-      nullDataText: {
-        type: String,
-        default: '暂无数据'
-      }
-    },
-    components: {},
-    data() {
-      return {}
-    },
-    computed: {},
-    methods: {},
-    mounted() {
-    },
-    created() {
-    },
-    watch: {}
-  }
+export default {
+  name: 'Index',
+  components: {},
+  props: {
+    nullDataText: {
+      type: String,
+      default: '暂无数据'
+    }
+  },
+  data() {
+    return {}
+  },
+  computed: {},
+  watch: {},
+  mounted() {
+  },
+  created() {
+  },
+  methods: {}
+}
 </script>
 
 <style scoped lang="scss">
   .DydNullData {
-    display:block;
+    display:inline-block;
     text-align: center;
     align-self: center;
-    padding: 50px;
     .dyd-null-page-text {
       margin-top: 50px;
       font-size: 18px;

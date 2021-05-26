@@ -5,6 +5,9 @@ import DydNullData from './DydNullData' // 空数据
 import DydDialog from './DydDialog' // 弹框
 import DydUpFile from './DydUpFile' // 上传文件
 import DydEditText from './DydEditText' // 上传文件
+import DydFile from './DydFile' // 树形文件
+import DydDrawer from './DydDrawer' // 抽屉
+import DydSearch from './DydSearch' // 搜索
 
 const publicTitle = {
   install: function(Vue) {
@@ -15,6 +18,9 @@ const publicTitle = {
     Vue.component('DydDialog', DydDialog)
     Vue.component('DydUpFile', DydUpFile)
     Vue.component('DydEditText', DydEditText)
+    Vue.component('DydFile', DydFile)
+    Vue.component('DydDrawer', DydDrawer)
+    Vue.component('DydSearch', DydSearch)
   }
 }
 export default publicTitle

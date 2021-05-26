@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   height: 50px;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
@@ -90,7 +90,7 @@ export default {
     -webkit-tap-highlight-color:transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, .025)
+      background: #606266
     }
   }
 

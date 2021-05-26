@@ -1,6 +1,7 @@
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
+
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
@@ -49,6 +50,14 @@ export default {
     isCollapse() {
       return !this.sidebar.opened
     }
+  },
+  methods:{
+    toggleSideBar() {
+      this.$store.dispatch('app/toggleSideBar')
+    },
   }
 }
 </script>
+<style scoped lang="scss">
+
+</style>

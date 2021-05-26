@@ -494,7 +494,7 @@ const asyncRoutes = [
     ]
   },
 
-  { path: '*', redirect: '/404', hidden: true }
+  // { path: '*', redirect: '/404', hidden: true }
 ]
 
 module.exports = {

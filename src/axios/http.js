@@ -41,5 +41,5 @@ const http ={
     return request(config)
   }
 }
-//导出
+// 导出
 export default http

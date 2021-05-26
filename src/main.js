@@ -2,13 +2,13 @@ import Vue from 'vue'
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 import global from './global'
 Vue.use(global)
-import Element from './components/element'
-Vue.use(Element)
+
 import component from './components/index'
 Vue.use(component)
 import './styles/element-variables.scss'
 import '@/styles/index.scss' // global css
-
+import Element from './components/element'
+Vue.use(Element)
 import App from './App'
 import store from './store'
 import router from './router'

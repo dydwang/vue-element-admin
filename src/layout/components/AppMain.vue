@@ -26,9 +26,10 @@ export default {
 .app-main {
   /* 50= navbar  50  */
   min-height: calc(100vh - 50px);
+  height: calc(100vh - 50px);
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: auto !important;
 }
 
 .fixed-header+.app-main {
@@ -39,6 +40,8 @@ export default {
   .app-main {
     /* 84 = navbar + tags-view = 50 + 34 */
     min-height: calc(100vh - 84px);
+    padding: 20px 40px 0 40px;
+    background-color: #f7faf9;
   }
 
   .fixed-header+.app-main {
