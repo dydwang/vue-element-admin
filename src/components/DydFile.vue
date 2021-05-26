@@ -1,7 +1,7 @@
 <template>
   <div class="DydFile" :style="style">
     <dyd-search @search="val => $refs.tree.filter(val)"></dyd-search>
-    <el-tree :data="list" ref="tree" v-bind="$attrs"  v-on="$listeners">
+    <el-tree :data="list" ref="tree" v-bind="$attrs"  v-on="$listeners" :filter-node-method="filterNode">
       <span slot-scope="{ node, data }" class="custom-tree-node">
         <span :class=" isFolder(node, data) ? 'is-folder-spot': 'is-file-spot'"></span>
         <span :class=" isFolder(node, data) ? 'is-folder': 'is-file'">{{ node.label }}</span>
@@ -28,7 +28,14 @@ export default {
     isFolder: {
       default: (node, data) => data.type === 1,
       type: Function
-    }
+    },
+    filterNode:{
+      default: (value, data) => {
+        if (!value) return true;
+        return data.label.indexOf(value) !== -1;
+      },
+      type: Function
+    },
   },
   data() {
     return {
